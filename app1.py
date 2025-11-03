@@ -16,7 +16,7 @@ except locale.Error:
 @st.cache_data
 def load_data():
     try:
-        data = pd.read_csv('data/dados_consolidados.csv')
+        data = pd.read_csv('dados_consolidados.csv')
         # Converter colunas de data, tratando possíveis erros
         data['created_at'] = pd.to_datetime(data['created_at'], errors='coerce')
         data['completed_at'] = pd.to_datetime(data['completed_at'], errors='coerce')
